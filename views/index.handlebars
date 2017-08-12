@@ -1,0 +1,15 @@
+		
+{{#each News}}
+{{#unless saved}}
+	<div class="card col-md-6" style="padding-bottom: 15px; padding-top= 15px;">
+		<img class="card-img-top pic" src="{{this.image}}" style="height: 180px; width: 380px; display: block;">
+		<div class="card-block">
+		  <h4 class="card-title" id="news">{{this.title}}</h4>
+		  <a id="article" href="http://www.theonion.com{{this.link}}">{{this.link}}</a>
+		  <br></br>
+		<button type="button" class="btn btn-default btn-sm favorite" data-status="{{this.saved}}" data-id="{{this._id}}">Favorite</button>
+		</div>
+	</div>
+{{/unless}}
+{{/each}}
+
